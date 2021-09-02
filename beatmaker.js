@@ -15,6 +15,7 @@ class DrumKit {
         this.muteBtns = document.querySelectorAll(".mute");
         this.tempoSlider = document.querySelector(".tempo-slider");
     }
+
     activePad() {
         this.classList.toggle("active")
     }
@@ -119,8 +120,9 @@ class DrumKit {
     }
 }
 
-const drumKit = new DrumKit()
 
+
+const drumKit = new DrumKit()
 
 drumKit.pads.forEach(pad => {
     pad.addEventListener("click", drumKit.activePad);
@@ -153,4 +155,5 @@ drumKit.tempoSlider.addEventListener("input", function(e) {
 drumKit.tempoSlider.addEventListener("change", function(e) {
     drumKit.updateTempo(e);
 })
+
 
